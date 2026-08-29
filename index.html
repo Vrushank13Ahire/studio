@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perihelion — A Digital Art Studio</title>
+<meta name="description" content="Perihelion is a small studio designing websites and digital experiences staged like light — for people who want to be remembered, not just found.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Grain overlay -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor" aria-hidden="true">
+  <svg viewBox="0 0 60 60" class="cursor__aperture">
+    <g class="cursor__blades">
+      <path class="blade" d="M30 30 L30 4 A26 26 0 0 1 52 17 Z"></path>
+      <path class="blade" d="M30 30 L52 17 A26 26 0 0 1 52 43 Z"></path>
+      <path class="blade" d="M30 30 L52 43 A26 26 0 0 1 30 56 Z"></path>
+      <path class="blade" d="M30 30 L30 56 A26 26 0 0 1 8 43 Z"></path>
+      <path class="blade" d="M30 30 L8 43 A26 26 0 0 1 8 17 Z"></path>
+      <path class="blade" d="M30 30 L8 17 A26 26 0 0 1 30 4 Z"></path>
+    </g>
+  </svg>
+</div>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader__iris"></div>
+  <div class="preloader__center">
+    <span class="preloader__mark">P</span>
+    <span class="preloader__word">PERIHELION</span>
+  </div>
+</div>
+
+<!-- Nav -->
+<header class="nav" id="nav">
+  <a href="#entrance" class="nav__logo">PERIHELION<span class="nav__ring">°</span></a>
+
+  <nav class="nav__links" id="navLinks">
+    <a href="#studio"><span class="nav__num">II</span>Studio</a>
+    <a href="#disciplines"><span class="nav__num">III</span>Disciplines</a>
+    <a href="#exhibits"><span class="nav__num">IV</span>Exhibits</a>
+    <a href="#begin"><span class="nav__num">VII</span>Begin</a>
+  </nav>
+
+  <div class="nav__controls">
+    <button class="toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+      <span class="toggle__blade"></span>
+    </button>
+    <a href="#begin" class="pill-cta">Contact Us</a>
+    <button class="nav__burger" id="navBurger" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#studio">Studio</a>
+  <a href="#disciplines">Disciplines</a>
+  <a href="#exhibits">Exhibits</a>
+  <a href="#voices">Voices</a>
+  <a href="#begin">Begin</a>
+</div>
+
+<main>
+
+  <!-- I. ENTRANCE -->
+  <section class="entrance" id="entrance">
+    <div class="entrance__vignette" aria-hidden="true"></div>
+    <canvas id="fieldCanvas" class="entrance__field"></canvas>
+
+    <svg class="orbit-rings" viewBox="0 0 800 800" aria-hidden="true">
+      <circle cx="400" cy="400" r="220" class="orbit-ring orbit-ring--1"></circle>
+      <circle cx="400" cy="400" r="300" class="orbit-ring orbit-ring--2"></circle>
+      <circle cx="400" cy="400" r="380" class="orbit-ring orbit-ring--3"></circle>
+    </svg>
+
+    <div class="orb-wrap" id="orbWrap" aria-hidden="true">
+      <div class="orb" id="orb">
+        <span class="orb__shine"></span>
+      </div>
+      <div class="orb__shard orb__shard--1"></div>
+      <div class="orb__shard orb__shard--2"></div>
+    </div>
+
+    <div class="entrance__inner">
+      <p class="eyebrow" data-reveal>I — ENTRANCE <span class="eyebrow__dot"></span> ESTABLISHED IN THE DARK</p>
+      <h1 class="entrance__title" id="entranceTitle">
+        <span class="line" data-reveal>Interfaces,</span>
+        <span class="line" data-reveal>staged like <em>light.</em></span>
+      </h1>
+      <p class="entrance__sub" data-reveal>
+        A small studio designing websites and digital work built the way an exhibition is built —
+        with restraint, rhythm, and something worth walking toward.
+      </p>
+      <div class="entrance__cta" data-reveal>
+        <a href="#exhibits" class="btn btn--ghost">View the exhibits</a>
+        <a href="#begin" class="btn btn--fill">Begin a project</a>
+      </div>
+    </div>
+
+    <div class="entrance__scroll" aria-hidden="true">
+      <span>SCROLL</span>
+      <div class="entrance__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- II. STUDIO -->
+  <section class="studio" id="studio">
+    <div class="room-label" data-reveal><span>II</span>Studio</div>
+
+    <div class="studio__grid">
+      <p class="studio__lede" data-reveal>
+        We don't build funnels. We build rooms people want to walk through twice —
+        then send to a friend without being asked to.
+      </p>
+      <div class="studio__body" data-reveal>
+        <p>
+          Perihelion is the point in an orbit closest to the light. We named the studio after it
+          because that's the only brief we ever take on twice: get the thing closer to the light,
+          then get out of the way.
+        </p>
+        <p>
+          Every engagement starts as a question about composition, pacing and restraint — and ends
+          as a website, a brand system, or a piece of interactive work that didn't exist before.
+        </p>
+      </div>
+    </div>
+
+    <ul class="studio__values" data-reveal>
+      <li>Craft</li>
+      <li>Restraint</li>
+      <li>Atmosphere</li>
+      <li>Precision</li>
+    </ul>
+  </section>
+
+  <!-- III. DISCIPLINES -->
+  <section class="disciplines" id="disciplines">
+    <div class="room-label" data-reveal><span>III</span>Disciplines</div>
+
+    <ul class="discipline-list">
+      <li class="discipline" data-reveal data-tilt>
+        <span class="discipline__num">01</span>
+        <div class="discipline__text">
+          <h3>Web Design</h3>
+          <p>Interfaces composed like stage sets — light, hierarchy, and pacing before pixels.</p>
+        </div>
+        <span class="discipline__icon" aria-hidden="true"></span>
+      </li>
+      <li class="discipline" data-reveal data-tilt>
+        <span class="discipline__num">02</span>
+        <div class="discipline__text">
+          <h3>Web Development</h3>
+          <p>Hand-built front ends. No page builders, no recycled templates, no bloat.</p>
+        </div>
+        <span class="discipline__icon" aria-hidden="true"></span>
+      </li>
+      <li class="discipline" data-reveal data-tilt>
+        <span class="discipline__num">03</span>
+        <div class="discipline__text">
+          <h3>Brand Identity</h3>
+          <p>Marks, type systems and colour languages that hold up in a gallery and a browser tab.</p>
+        </div>
+        <span class="discipline__icon" aria-hidden="true"></span>
+      </li>
+      <li class="discipline" data-reveal data-tilt>
+        <span class="discipline__num">04</span>
+        <div class="discipline__text">
+          <h3>Motion &amp; Interaction</h3>
+          <p>Micro-animation and scroll choreography that gives a static page an actual pulse.</p>
+        </div>
+        <span class="discipline__icon" aria-hidden="true"></span>
+      </li>
+      <li class="discipline" data-reveal data-tilt>
+        <span class="discipline__num">05</span>
+        <div class="discipline__text">
+          <h3>Digital Installations</h3>
+          <p>Experimental one-off pieces — generative art, launch pages, and things built to be remembered.</p>
+        </div>
+        <span class="discipline__icon" aria-hidden="true"></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- IV. EXHIBITS -->
+  <section class="exhibits" id="exhibits">
+    <div class="room-label" data-reveal><span>IV</span>Exhibits</div>
+    <p class="exhibits__note" data-reveal>Selected studies. Each piece generated live in your browser — no two visits render the same.</p>
+
+    <div class="exhibit-grid">
+      <article class="exhibit" data-reveal data-tilt data-seed="1">
+        <canvas class="exhibit__canvas"></canvas>
+        <div class="exhibit__plate">
+          <h3>Nocturne</h3>
+          <dl>
+            <div><dt>Client</dt><dd>Fragrance House</dd></div>
+            <div><dt>Medium</dt><dd>Flagship Site</dd></div>
+            <div><dt>Year</dt><dd>2025</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="exhibit" data-reveal data-tilt data-seed="2">
+        <canvas class="exhibit__canvas"></canvas>
+        <div class="exhibit__plate">
+          <h3>Numéro</h3>
+          <dl>
+            <div><dt>Client</dt><dd>Independent Label</dd></div>
+            <div><dt>Medium</dt><dd>Brand + Web</dd></div>
+            <div><dt>Year</dt><dd>2025</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="exhibit" data-reveal data-tilt data-seed="3">
+        <canvas class="exhibit__canvas"></canvas>
+        <div class="exhibit__plate">
+          <h3>Atlas Type</h3>
+          <dl>
+            <div><dt>Client</dt><dd>Type Foundry</dd></div>
+            <div><dt>Medium</dt><dd>Catalogue Site</dd></div>
+            <div><dt>Year</dt><dd>2024</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="exhibit" data-reveal data-tilt data-seed="4">
+        <canvas class="exhibit__canvas"></canvas>
+        <div class="exhibit__plate">
+          <h3>Glass &amp; Grain</h3>
+          <dl>
+            <div><dt>Client</dt><dd>Ceramics Studio</dd></div>
+            <div><dt>Medium</dt><dd>Portfolio</dd></div>
+            <div><dt>Year</dt><dd>2024</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="exhibit" data-reveal data-tilt data-seed="5">
+        <canvas class="exhibit__canvas"></canvas>
+        <div class="exhibit__plate">
+          <h3>Meridian</h3>
+          <dl>
+            <div><dt>Client</dt><dd>Fintech Rebrand</dd></div>
+            <div><dt>Medium</dt><dd>Product Site</dd></div>
+            <div><dt>Year</dt><dd>2023</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="exhibit" data-reveal data-tilt data-seed="6">
+        <canvas class="exhibit__canvas"></canvas>
+        <div class="exhibit__plate">
+          <h3>Low Orbit</h3>
+          <dl>
+            <div><dt>Client</dt><dd>Experimental Short</dd></div>
+            <div><dt>Medium</dt><dd>Interactive Film</dd></div>
+            <div><dt>Year</dt><dd>2023</dd></div>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- V. VOICES -->
+  <section class="voices" id="voices">
+    <div class="room-label" data-reveal><span>V</span>Voices</div>
+
+    <div class="voice-carousel" data-reveal>
+      <div class="voice-track" id="voiceTrack">
+        <blockquote class="voice is-active">
+          <p>“They didn't ask what we wanted. They asked what we wanted people to <em>feel</em> — then built that.”</p>
+          <cite>Creative Director, Nocturne</cite>
+        </blockquote>
+        <blockquote class="voice">
+          <p>“The site doesn't feel like a website. It feels like the first room of something bigger.”</p>
+          <cite>Founder, Numéro</cite>
+        </blockquote>
+        <blockquote class="voice">
+          <p>“Every page has a pace to it. Nobody bounces around here — they move the way we intended.”</p>
+          <cite>Head of Brand, Atlas Type</cite>
+        </blockquote>
+        <blockquote class="voice">
+          <p>“Quiet, precise, a little strange in exactly the right places. That's the studio, and now it's us too.”</p>
+          <cite>Partner, Meridian</cite>
+        </blockquote>
+      </div>
+
+      <div class="voice-dots" id="voiceDots"></div>
+    </div>
+
+    <div class="satisfaction" data-reveal>
+      <div class="satisfaction__stat"><strong>98%</strong><span>return for a second project</span></div>
+      <div class="satisfaction__stat"><strong>4.9</strong><span>average studio rating</span></div>
+      <div class="satisfaction__stat"><strong>0</strong><span>template starting points, ever</span></div>
+    </div>
+  </section>
+
+  <!-- VI. PROCESS -->
+  <section class="process" id="process">
+    <div class="room-label" data-reveal><span>VI</span>Process</div>
+
+    <ol class="process-line">
+      <li data-reveal>
+        <span class="process-line__num">01</span>
+        <h4>Discover</h4>
+        <p>We sit inside the problem before we touch a single pixel — audience, tone, constraints.</p>
+      </li>
+      <li data-reveal>
+        <span class="process-line__num">02</span>
+        <h4>Design</h4>
+        <p>Composition, type and colour explored as a system, not a single homepage mock.</p>
+      </li>
+      <li data-reveal>
+        <span class="process-line__num">03</span>
+        <h4>Develop</h4>
+        <p>Hand-coded, framework-free where it counts, and fast on the devices people actually use.</p>
+      </li>
+      <li data-reveal>
+        <span class="process-line__num">04</span>
+        <h4>Deliver</h4>
+        <p>Launch, then a quiet week of watching, listening and sanding down the rough edges.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- VII. BEGIN -->
+  <section class="begin" id="begin">
+    <div class="room-label" data-reveal><span>VII</span>Begin</div>
+
+    <div class="begin__grid">
+      <div class="begin__intro" data-reveal>
+        <h2>Have a project<br>worth staging?</h2>
+        <p>Tell us what it is. We reply within two working days, always in a full paragraph — never a template.</p>
+        <a href="mailto:hello@perihelion.studio" class="begin__email">hello@perihelion.studio</a>
+      </div>
+
+      <form class="begin__form" id="begin-form" data-reveal>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="type">Project type</label>
+          <select id="type" name="type">
+            <option>Website</option>
+            <option>Brand identity</option>
+            <option>Digital installation</option>
+            <option>Something stranger</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--fill btn--wide">
+          <span class="btn__label">Send it in</span>
+        </button>
+        <p class="begin__status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <span class="footer__mark">PERIHELION<span class="nav__ring">°</span></span>
+    <button class="footer__top-btn" id="toTop" aria-label="Back to top">↑</button>
+  </div>
+  <div class="footer__row">
+    <div class="footer__links">
+      <a href="#studio">Studio</a>
+      <a href="#disciplines">Disciplines</a>
+      <a href="#exhibits">Exhibits</a>
+      <a href="#voices">Voices</a>
+      <a href="#begin">Begin</a>
+    </div>
+    <div class="footer__socials">
+      <a href="#">Instagram</a>
+      <a href="#">Are.na</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <p class="footer__legal">© <span id="year"></span> Perihelion Studio. Built in-house, one careful pixel at a time.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
